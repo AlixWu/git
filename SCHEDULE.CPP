@@ -191,7 +191,53 @@ void Sort_Data2(int input[30][8],int k,int l,int m)
 		}
 	}
 }
+void FCFS()
+{
+	int i=0,j,count=0,time=0,check,output;
+	Sort_Data(Fcfs,2,Row,0);
+	time = Get_Total_Burst_Time(Fcfs);
+	time += Fcfs[0][2];
+	fprintf(Output_Fptr,"\n============== FCFS ================\n");
+	while(count<=time)
+	{
+		check=0;
+		for(i=0;i<Row;i++)
+		{
+			if(Fcfs[i][2]<=count&&Fcfs[i][1]!=0)
+			{
+				output=i;
+				check=1;
+				Fcfs[i][1]--;
+				break;
+			}
+		}
+		if(check==1)
+		{
+			Sort_Data(Input,2,Row,0);
+			Fcfs[output][5]=count-Input[output][1]-Fcfs[output][2]+1;
+			Fcfs[output][6]=Input[output][1]+Fcfs[output][5];
+			Sort_Data(Input,0,Row,0);
+			if(Fcfs[output][0]<=9)
+			{
+				fprintf(Output_Fptr,"%d",Fcfs[output][0]);
+			}
+			else
+				fprintf(Output_Fptr,"%c",Fcfs[output][0]+55);
+		}
+		else
+		{
+			fprintf(Output_Fptr,"-");
+		}
+		count++;
 
+	}
+	Sort_Data(Fcfs,0,Row,0);
+	Waiting_Time(Fcfs,1);
+	Turnaround_Time(Fcfs,1);
+	fprintf(Output_Fptr,"\n");
+}
+void PP()
+{
 	int i=0,j,p=0,count=0,count2=0,count3=0,count4=0,time=0,check,output,temp;
 	Sort_Data(Pp,2,Row,0);
 	time = Get_Total_Burst_Time(Pp);
