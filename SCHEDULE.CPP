@@ -21,7 +21,7 @@ int Total_Burst_Time;
 int Time_Slice;
 int Waiting[30][6]={0};
 int Turnaround[30][6]={0};
-
+/////
 //===================================================//
 //             列出Turnaround Time    
 //	      所有資料存在於Turnaround這個陣列中             
