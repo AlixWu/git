@@ -32,6 +32,8 @@ void skip()
 
 voie skip2()
 {
+		for
+		(int j=0 ; j<=9 ; j++)
 }
 //===================================================//
 //             ¦C¥XTurnaround Time    
