@@ -27,9 +27,7 @@ void skip()
 		for
 		(int i=0 ; i<=9 ; i++)
 			printf("---------");
-		for
-		(int j=0 ; j<=9 ; j++)
-		printf("--");
+
 }
 //===================================================//
 //             ¦C¥XTurnaround Time    
