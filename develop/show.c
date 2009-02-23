@@ -4,4 +4,5 @@ void main()
 {
 	printf("git test");
 
+	printf("git test");
 }
